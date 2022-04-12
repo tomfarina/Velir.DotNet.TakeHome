@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace TakeHome.Models
 {
 	public class FeedbackForm
 	{
+        [DisplayName("First Name")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Provide First Name")]
         [StringLength(25, MinimumLength = 1, ErrorMessage = "First Name Should be min 1 and max 25 length")]
         public String FirstName
@@ -15,6 +17,7 @@ namespace TakeHome.Models
             get;
             set;
         }
+        [DisplayName("Last Name")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Provide Last Name")]
         [StringLength(25, MinimumLength = 1, ErrorMessage = "First Name Should be min 1 and max 25 length")]
         public String LastName
